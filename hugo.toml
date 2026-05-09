@@ -1,0 +1,49 @@
+baseURL = 'https://trevan.github.io/'
+languageCode = 'zh-cn'
+title = 'Trevan 的博客'
+theme = 'PaperMod'
+
+[params]
+  description = 'AI Agent、投资、技术思考'
+  defaultTheme = 'auto'
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+
+  [params.homeInfoParams]
+    Title = "你好，我是 Trevan 👋"
+    Content = "AI Agent 开发者 | 投资爱好者 | 技术思考者"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/trevan"
+  [[params.socialIcons]]
+    name = "twitter"
+    url = "https://twitter.com/trevan"
+
+[[menu.main]]
+  identifier = "home"
+  name = "首页"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  identifier = "about"
+  name = "关于"
+  url = "/about/"
+  weight = 2
+
+[[menu.main]]
+  identifier = "tags"
+  name = "标签"
+  url = "/tags/"
+  weight = 3
+
+[pagination]
+  pagerSize = 10
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
