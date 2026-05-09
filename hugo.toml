@@ -1,55 +1,92 @@
-baseURL = 'https://trevan.github.io/'
+baseURL = 'https://trevanzhang.github.io/'
 languageCode = 'zh-cn'
 title = 'Trevan 的博客'
-theme = 'PaperMod'
+theme = 'LoveIt'
 
 [params]
   description = 'AI Agent、投资、技术思考'
+  avatar = '/images/avatar.png'
+  headerTitle = 'Trevan 的博客'
   defaultTheme = 'auto'
-  ShowReadingTime = true
-  ShowShareButtons = false
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowToc = false
-  ShowWordCount = false
-  UseHugoToc = false
 
-  [params.homeInfoParams]
-    Title = "你好，我是 Trevan 👋"
-    Content = "AI Agent 开发者 | 投资爱好者 | 技术思考者"
+  [params.author]
+    name = '傲来说'
+    link = 'https://trevanzhang.github.io/'
+    avatar = '/images/avatar.png'
 
-  [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/trevanzhang"
-  [[params.socialIcons]]
-    name = "twitter"
-    url = "https://twitter.com/trevan"
+  [params.home]
+    enable = true
+    
+    [params.home.profile]
+      enable = true
+      gravatarEmail = ''
+      avatarURL = '/images/avatar.png'
+      title = '你好，我是 Trevan 👋'
+      subtitle = 'AI Agent 开发者 | 投资爱好者 | 技术思考者'
+      typeWriter = ['爱折腾代码', '喜欢写东西', '关注 AI 前沿']
+      social = true
+
+    [params.home.posts]
+      enable = true
+      sort = 'date'
+      showAll = true
+
+  [params.social]
+    Github = 'trevanzhang'
+    Twitter = 'trevan'
+    email = 'trevanzhang@qq.com'
+
+  [params.page]
+    [params.page.socialIcons]
+      twitter = 'trevan'
+      github = 'trevanzhang'
+      email = 'trevanzhang@qq.com'
 
 [[menu.main]]
-  identifier = "home"
-  name = "首页"
-  url = "/"
+  identifier = 'home'
+  name = '首页'
+  url = '/'
   weight = 1
+  pre = '<i class="fas fa-home"></i>'
 
 [[menu.main]]
-  identifier = "archives"
-  name = "归档"
-  url = "/posts/"
+  identifier = 'posts'
+  name = '归档'
+  url = '/posts/'
   weight = 2
+  pre = '<i class="fas fa-archive"></i>'
 
 [[menu.main]]
-  identifier = "tags"
-  name = "标签"
-  url = "/tags/"
+  identifier = 'tags'
+  name = '标签'
+  url = '/tags/'
   weight = 3
+  pre = '<i class="fas fa-tags"></i>'
 
 [pagination]
   pagerSize = 10
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ['HTML', 'RSS', 'JSON']
+  page = ['HTML']
+  section = ['HTML', 'RSS']
 
 [taxonomies]
-  tag = "tags"
-  category = "categories"
+  tag = 'tags'
+  category = 'categories'
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = false
+
+  [markup.goldmark.renderer]
+    unsafe = true
+
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
