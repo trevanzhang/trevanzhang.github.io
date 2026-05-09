@@ -1,6 +1,6 @@
 # AGENTS.md - 傲来说博客 AI 助手指南
 
-> 个人博客项目：Hugo + LoveIt 主题，自动从微信公众号草稿同步文章
+> 个人博客项目：Hugo + LoveIt 主题，从微信公众号已发布文章同步
 
 ---
 
@@ -8,12 +8,12 @@
 
 | 项目 | 信息 |
 |------|------|
-| **域名** | `https://aolaishuo.cc` |
+| **域名** | `https://aolaishuo.cc` ✅ (HTTPS 已启用) |
 | **框架** | Hugo v0.147.7 (extended) |
 | **主题** | LoveIt |
 | **部署** | GitHub Pages (trevanzhang/trevanzhang.github.io) |
 | **源码** | ~/projects/blog/ |
-| **文章来源** | ~/wechatPub/drafts/ (微信公众号草稿) |
+| **文章来源** | `~/wechatPub/published/` (微信公众号已发布文章) |
 
 ---
 
@@ -33,7 +33,7 @@
 │   └── LoveIt/             # 主题 (git submodule)
 ├── public/                 # 构建输出 (gitignore)
 ├── hugo.toml               # 站点配置
-├── sync-blog.sh            # 微信草稿同步脚本
+├── sync-blog.sh            # 微信文章同步脚本
 └── add-summary-divider.sh  # 添加摘要分隔符脚本
 ```
 
@@ -73,12 +73,14 @@ headerTitle = '傲来说'
 
 ## 🔄 工作流
 
-### 1. 文章发布流程
+### 文章发布流程
 
 ```
 Obsidian 撰写
     ↓
-保存到 ~/wechatPub/drafts/
+发布到微信公众号
+    ↓
+文章保存到 ~/wechatPub/published/
     ↓
 运行 ./sync-blog.sh 同步到博客
     ↓
@@ -87,10 +89,10 @@ git commit & push
 GitHub Actions 自动构建部署
 ```
 
-### 2. 常用命令
+### 常用命令
 
 ```bash
-# 同步所有未发布的草稿
+# 同步所有已发布文章
 ./sync-blog.sh
 
 # 同步指定文章
@@ -115,8 +117,8 @@ cat .sync.log
 #### 1. 发布新文章
 
 ```bash
-# 1. 确认草稿已存在于 ~/wechatPub/drafts/
-ls ~/wechatPub/drafts/*.md
+# 1. 确认文章已存在于 ~/wechatPub/published/
+ls ~/wechatPub/published/*.md
 
 # 2. 同步到博客
 cd ~/projects/blog && ./sync-blog.sh
@@ -159,19 +161,14 @@ hugo --minify && grep -r "My cool site" public/ | wc -l
 
 **原因**: LoveIt 主题默认值未被覆盖
 
-**解决**:
+**解决**: 确保 `hugo.toml` 中有正确的嵌套配置：
+
 ```toml
-# 确保 hugo.toml 中有正确的嵌套配置
 [params.header.title]
   name = '傲来说'
 ```
 
-然后重新构建：
-```bash
-hugo --minify
-git add -A && git commit -m "fix: 标题配置"
-git push
-```
+然后重新构建并推送。
 
 ### 问题：GitHub Pages 未更新
 
@@ -182,7 +179,7 @@ git push
 ### 问题：同步脚本报错
 
 **检查**:
-1. 源文件是否存在：`ls ~/wechatPub/drafts/`
+1. 源文件是否存在：`ls ~/wechatPub/published/`
 2. 查看同步日志：`cat .sync.log`
 3. 确保脚本有执行权限：`chmod +x sync-blog.sh`
 
@@ -236,6 +233,7 @@ git push origin-user main
 - **构建时间**: ~30 秒
 - **部署环境**: GitHub Pages (ubuntu-latest)
 - **Hugo 版本**: 0.147.7 (extended)
+- **HTTPS**: ✅ 已启用 (Let's Encrypt 证书)
 
 查看部署状态：https://github.com/trevanzhang/trevanzhang.github.io/actions
 
