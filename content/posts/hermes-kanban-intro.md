@@ -1,10 +1,9 @@
 ---
 title: 'Hermes v0.12.0 的 Kanban 功能，到底解决了什么问题？'
 date: 2026-05-09T00:00:00+08:00
-tags: []
-categories: []
+tags: ['Hermes', 'Kanban', 'Agent', '产品介绍']
+categories: ['产品介绍']
 ---
-
 容我先扯远一点。
 
 <!--more-->

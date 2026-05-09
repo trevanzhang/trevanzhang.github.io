@@ -1,8 +1,8 @@
 ---
 title: 'AI Agent 时代的操作系统：为什么 Linux 成了智能体的母语'
 date: 2026-05-09T00:00:00+08:00
-tags: []
-categories: []
+tags: ['AI', 'Agent', 'Linux', '操作系统']
+categories: ['技术思考']
 ---
 
 ## 上一篇文章的一个伏笔

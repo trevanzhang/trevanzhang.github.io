@@ -1,10 +1,9 @@
 ---
 title: 'Hermes Kanban 入门手册：多智能体协作的正确姿势'
 date: 2026-05-09T00:00:00+08:00
-tags: []
-categories: []
+tags: ['Hermes', 'Kanban', 'Agent', '教程', '多智能体']
+categories: ['技术教程']
 ---
-
 > **版本**：基于 kanban-orchestrator v2.0.0 和 kanban-worker v2.0.0
 > **创建时间**：2026-05-07
 > **目标读者**：初次使用 Hermes Kanban 多智能体协作系统的用户

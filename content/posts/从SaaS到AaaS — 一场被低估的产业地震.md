@@ -1,8 +1,8 @@
 ---
 title: 'Untitled'
 date: 2026-05-09T00:00:00+08:00
-tags: []
-categories: []
+tags: ['AI', 'SaaS', 'AaaS', '产业分析', '趋势']
+categories: ['产业观察']
 ---
 
 ## 一场被低估的产业地震
