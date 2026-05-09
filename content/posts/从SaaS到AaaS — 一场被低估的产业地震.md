@@ -1,5 +1,5 @@
 ---
-title: 'Untitled'
+title: '从 SaaS 到 AaaS — 一场被低估的产业地震'
 date: 2026-05-09T00:00:00+08:00
 tags: ['AI', 'SaaS', 'AaaS', '产业分析', '趋势']
 categories: ['产业观察']
