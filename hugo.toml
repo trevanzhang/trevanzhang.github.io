@@ -1,6 +1,6 @@
 baseURL = 'https://trevanzhang.github.io/'
 languageCode = 'zh-cn'
-title = 'Trevan 的博客'
+title = '傲来说的博客'
 theme = 'LoveIt'
 relativeURLs = true
 canonifyURLs = true
@@ -8,7 +8,7 @@ canonifyURLs = true
 [params]
   description = 'AI Agent、投资、技术思考'
   avatar = '/images/avatar.png'
-  headerTitle = 'Trevan 的博客'
+  headerTitle = '傲来说'
   defaultTheme = 'auto'
 
   [params.author]
@@ -23,7 +23,7 @@ canonifyURLs = true
       enable = true
       gravatarEmail = ''
       avatarURL = '/images/avatar.png'
-      title = '你好，我是 Trevan 👋'
+      title = '你好，我是傲来说 👋'
       subtitle = 'AI Agent 开发者 | 投资爱好者 | 技术思考者'
       typeWriter = ['爱折腾代码', '喜欢写东西', '关注 AI 前沿']
       social = true
