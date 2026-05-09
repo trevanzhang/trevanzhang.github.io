@@ -1,4 +1,4 @@
-baseURL = 'https://trevanzhang.github.io/blog/'
+baseURL = 'https://trevanzhang.github.io/'
 languageCode = 'zh-cn'
 title = 'Trevan 的博客'
 theme = 'LoveIt'
