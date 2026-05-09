@@ -11,6 +11,10 @@ canonifyURLs = true
   headerTitle = '傲来说'
   defaultTheme = 'auto'
 
+  [params.app]
+    title = '傲来说'
+    name = '傲来说'
+
   [params.author]
     name = '傲来说'
     link = 'https://trevanzhang.github.io/'
