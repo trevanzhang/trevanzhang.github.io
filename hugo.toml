@@ -8,8 +8,10 @@ canonifyURLs = true
 [params]
   description = 'AI Agent、投资、技术思考'
   avatar = '/images/avatar.png'
-  headerTitle = '傲来说'
   defaultTheme = 'auto'
+
+  [params.header.title]
+    name = '傲来说'
 
   [params.app]
     title = '傲来说'
